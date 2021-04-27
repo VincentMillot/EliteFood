@@ -1,0 +1,100 @@
+inscription
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="inscrire.css" />
+</head>
+<body>
+
+<?php
+require('config.php');
+if (isset($_REQUEST['mail'], $_REQUEST['mdp'])){
+  // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
+  $mail = stripslashes($_REQUEST['mail']);
+  $mail = mysqli_real_escape_string($conn, $mail);
+  // récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
+  $mdp = stripslashes($_REQUEST['mdp']);
+  $mdp = mysqli_real_escape_string($conn, $mdp);
+  //requéte SQL + mot de passe crypté
+    $query = "INSERT into `users` (mail, mdp)
+              VALUES ('$mail', '".hash('sha256', $mdp)."')";
+  // Exécuter la requête sur la base de données
+    $res = mysqli_query($conn, $query);
+    if($res){
+       echo "<div class='sucess'>
+             <h3>Vous êtes inscrit avec succès.</h3>
+             <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
+             </div>";}
+}
+else{
+?>
+<?php include("bandeau.php"); ?>
+<form class="box" action="" method="post">
+    <h1 class="box-title">S'inscrire</h1>
+    <input type="text" class="box-input" name="email" placeholder="Email" required />
+    <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
+    <input type="submit" name="submit" value="S'inscrire" class="box-button" />
+    <p class="box-register">Déjà inscrit? <a href="login.php">Connectez-vous ici</a></p>
+</form>
+<?php } ?>
+<?php include("footer.php"); ?>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+login
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>EliteFood</title>
+    <link rel="icon" href="Image/EF.png"/>
+    <link rel="stylesheet" href="login.css"/>
+  </head>
+  <body>
+    <div style="color:white;">
+    <?php include("bandeau.php"); ?>
+<?php
+require('config.php');
+session_start();
+if (isset($_POST['mail'])){
+  $mail = stripslashes($_REQUEST['mail']);
+  $mail = mysqli_real_escape_string($conn, $mail);
+  $mdp = stripslashes($_REQUEST['mdp']);
+  $mdp = mysqli_real_escape_string($conn, $mdp);
+  $query = "SELECT * FROM `users` WHERE mail='$mail' and mdp='".hash('sha256', $mdp)."'";
+  $result = mysqli_query($conn,$query) or die(mysql_error());
+  $rows = mysqli_num_rows($result);
+  if($rows==1){
+      $_SESSION['mail'] = $mail;
+      header("Location: yes.php");
+  }else{
+    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+  }
+}
+?>
+<form class="css" action="" method="post" name="login">
+<h1 class="css">Connexion</h1>
+<input type="text" class="box-input" name="mail" placeholder="Nom d'utilisateur">
+<input type="password" class="box-input" name="mdp" placeholder="Mot de passe">
+<input type="submit" value="Connexion " name="submit" class="box-button">
+<p class="css">Vous êtes nouveau ici? <a href="inscrire.php">S'inscrire</a></p>
+<?php if (! empty($message)) { ?>
+    <p class="errorMessage"><?php echo $message; ?></p>
+<?php } ?>
+
+
+
+  </body>
+  <?php include("footer.php"); ?>
+</html>

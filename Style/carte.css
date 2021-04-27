@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "PIZZARIA";
+  src: url("Police/PIZZARIA.ttf");
+}
+@font-face {
+  font-family: "Headlight";
+  src: url("Police/Headlight.otf");
+}
+@font-face {
+  font-family: "DJB Chalk";
+  src: url("Police/DJB Chalk It Up.ttf");
+}
+body{
+  min-width: 500px;
+  margin:0;
+  padding:0;
+  background: url(Image/tableau2.png) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+.total{
+	vertical-align: middle;
+}
+.total td{
+	height: 510px;
+}
+ul{
+	list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.boutonmenuprincipal1 {
+	font-family: DJB Chalk;
+	background-color: rgb(0,0,0,0);
+	background-image:url(Image/rectangle/petit1.png);
+	background-size: 230px 85px;
+	background-repeat: no-repeat;
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding:15px;
+	font-size: 40px;
+}
+.boutonmenuprincipal1:hover{
+	background-image:none;
+}
+.conteneur1{
+	background-color: rgb(0,0,0,0);
+	background-size: 230px 430px;
+	background-repeat: no-repeat;
+	font-family: DJB Chalk;
+	position: relative;
+	display: inline-block;;
+	background-color: rgb(0,0,0,0.5);
+	border-radius: 30px;
+	box-shadow: 0 0 22.5px 0 black;
+}
+.conteneur1-child {
+	border-radius: 0%;
+	display: none;
+	background-color: rgb(0,0,0,0);
+	min-width: 50px;
+	font-size: 30px;
+	text-align: left;
+}
+.conteneur1-child a {
+	color: white;
+	padding: 20px;
+	text-decoration: none;
+	display: block;
+}
+.conteneur1:hover .conteneur1-child {
+	display: block;
+}
+.conteneur1:hover{
+	background-image:url(Image/rectangle/grand1.png);
+	background-position: top 30%;
+}
+.conteneur1:hover .boutonmenuprincipal1{
+	background-image: none;
+}
+.boutonmenuprincipal2 {
+	font-family: DJB Chalk;
+	background-color: rgb(0,0,0,0);
+	background-image:url(Image/rectangle/petit2.png);
+	background-size: 267px 85px;
+	background-repeat: no-repeat;
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding:15px;
+	font-size: 40px;
+}
+.boutonmenuprincipal2:hover{
+	background-image:none;
+}
+.conteneur2{
+	background-color: rgb(0,0,0,0);
+	background-size: 267px 475px;
+	background-repeat: no-repeat;
+	font-family: DJB Chalk;
+	position: relative;
+	display: inline-block;
+	background-color: rgb(0,0,0,0.5);
+	border-radius: 30px;
+	box-shadow: 0 0 22.5px 0 black;
+}
+.conteneur2-child {
+	border-radius: 0%;
+	display: none;
+	background-color: rgb(0,0,0,0);
+	min-width: 50px;
+	font-size: 30px;
+	text-align: left;
+}
+.conteneur2-child a {
+	color: white;
+	padding: 20px;
+	text-decoration: none;
+	display: block;
+}
+.conteneur2:hover .conteneur2-child {
+	display: block;
+}
+.conteneur2:hover{
+	background-image:url(Image/rectangle/grand2.png);
+	background-position: top 30%;
+}
+.conteneur2:hover .boutonmenuprincipal2{
+	background-image: none;
+}
+.boutonmenuprincipal3 {
+	font-family: DJB Chalk;
+	background-color: rgb(0,0,0,0);
+	background-image:url(Image/rectangle/petit3.png);
+	background-size: 266px 85px;
+	background-repeat: no-repeat;
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding:15px;
+	font-size: 40px;
+}
+.boutonmenuprincipal3:hover{
+	background-image:none;
+}
+.conteneur3{
+	background-color: rgb(0,0,0,0);
+	background-size: 266px 500px;
+	background-repeat: no-repeat;
+	font-family: DJB Chalk;
+	position: relative;
+	display: inline-block;
+	background-color: rgb(0,0,0,0.5);
+	border-radius: 30px;
+	box-shadow: 0 0 22.5px 0 black;
+}
+.conteneur3-child {
+	border-radius: 0%;
+	display: none;
+	background-color: rgb(0,0,0,0);
+	min-width: 50px;
+	font-size: 30px;
+	text-align: left;
+}
+.conteneur3-child a {
+	color: white;
+	padding: 20px;
+	text-decoration: none;
+	display: block;
+}
+.conteneur3:hover .conteneur3-child {
+	display: block;
+}
+.conteneur3:hover{
+	background-image:url(Image/rectangle/grand3.png);
+	background-position: top 30%;
+}
+.conteneur3:hover .boutonmenuprincipal3{
+	background-image: none;
+}

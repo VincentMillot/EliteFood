@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "PIZZARIA";
+    src: url("Police/PIZZARIA.ttf");
+}
+@font-face {
+    font-family: "Headlight";
+    src: url("Police/Headlight.otf");
+}
+@font-face {
+    font-family: "DJB Chalk";
+    src: url("Police/DJB Chalk It Up.ttf");
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("Police/Poppins-Bold.ttf");
+}
+body{
+    min-width: 500px;
+    background-color: rgb(35,35,35);
+}
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    color:brown;
+}
+.bandeau {
+    position: static;
+    width: 100%;
+    background-color: black;
+    font-size:175%;
+    text-align: center;
+    color: white;
+    font-family: PIZZARIA;
+}
+.footer {
+    font-family: Poppins-Bold;
+    background-color:black;
+    position:static; /* ou absolute*/
+    font-size:150%;
+    text-align: left;
+    color: white;
+    width: 100%;
+    clear: both;
+    margin-bottom: 0;
+    bottom: 0;
+    -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.footer a:hover{
+    color:white;
+}
+.footer td{
+    text-align:center;
+}

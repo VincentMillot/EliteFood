@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "PIZZARIA";
+    src: url("Police/PIZZARIA.ttf");
+}
+@font-face {
+    font-family: "Headlight";
+    src: url("Police/Headlight.otf");
+}
+@font-face {
+    font-family: "DJB Chalk";
+    src: url("Police/DJB Chalk It Up.ttf");
+}
+body{
+    min-width: 500px;
+    background-color: rgb(35,35,35);
+}
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    color:brown;
+}
+
+.b2{
+    width: 100%;
+    color:white;
+    text-align:center;
+    font-family: Headlight;
+    font-size:120%;
+}
+.b3{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    column-width: auto;
+}
+.p1{
+    color:black;
+    background-color: white;
+    padding: 25px 0 25px 0;
+    font-size:180%;
+    font-family: PIZZARIA;
+    column-width: 500px;
+}
+.p2{
+    color:white;
+    background-color: black;
+    padding: 25px 0 25px 0;
+    font-size:180%;
+    font-family: PIZZARIA;
+}
+.btn1{
+    z-index: 2;
+    border-radius: 8px;
+    border : 5px solid white;
+    background-color: rgb(0,0,0,0.5);
+    font-family: PIZZARIA;
+    color:white;
+    width:200px;
+    height:56px;
+    font-size:180%;
+    box-shadow: 0 0 22.5px 0 black;
+    object-fit: contain;
+    position: sticky;
+}
+.btn1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.btn1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: -4px;
+    right: -20px;
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+.btn1:hover span {
+    padding-right: 25px;
+}
+.btn1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.btn2 {
+    font-size:100%;
+    font-family: PIZZARIA;
+    background-color: black;
+    color: white;
+    padding: 10px 15px 10px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius:8px;
+    text-align: center;
+}
+.btn2:hover {
+    background-color: white;
+    color: black;
+}
+.btn3{
+    font-size:100%;
+    font-family: PIZZARIA;
+    background-color: white;
+    color: black;
+    padding: 10px 15px 10px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+}
+.btn3:hover{
+    background-color: black;
+    color: white;
+}
+.conteneur_diapo{
+    width:1200px;
+    height:798px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slid_1, .slid_2, .slid_3{
+    z-index: 1;
+    position: absolute;
+    width:1200px;
+    height:799px;
+    object-fit: contain;
+}
+.slid_1{left: 0;}
+.slid_2{left: 1220px;}
+.slid_3{left: 2440px;}
+.conteneur_slide{
+    width: 3599px;
+    height: 799px;
+    left:0px;
+    position: absolute;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-name: anim_slide;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-name: anim_slide;
+    -ms-animation-duration: 10s;
+    -ms-animation-iteration-count:infinite;
+    -ms-animation-name: anim_slide;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-name: anim_slide;
+}
+@-webkit-keyframes anim_slide{
+    0% {left:0px;}
+    22% {left:0px;}
+    33% {left:-1220px;}
+    45% {left:-1220px;}
+    66% {left:-2440px;}
+    90% {left:-2440px;}
+}
+@-moz-keyframes anim_slide{
+    0% {left:0px;}
+    22% {left:0px;}
+    33% {left:-1220px;}
+    45% {left:-1220px;}
+    66% {left:-2440px;}
+    90% {left:-2440px;}
+}
+@keyframes anim_slide{
+    0% {left:0px;}
+    22% {left:0px;}
+    33% {left:-1220px;}
+    45% {left:-1220px;}
+    66% {left:-2440px;}
+    90% {left:-2440px;}
+}
